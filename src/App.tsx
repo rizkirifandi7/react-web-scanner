@@ -159,7 +159,7 @@ export default function ScannerPage() {
 										}
 									}}
 									onError={(error) => {
-										console.log(`onError: ${error?.message}`);
+										console.log(`onError: ${(error as Error)?.message ?? String(error)}`);
 									}}
 									components={{
 										onOff: true,
